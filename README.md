@@ -1,9 +1,10 @@
-#Install
+### Install
 
 `cd ProjectDirectory && yarn install`
+
 `cd frontend && yarn install`
 
-#Run application
+### Run application
 
 backend
 
