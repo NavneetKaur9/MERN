@@ -35,16 +35,12 @@ const useStyles = makeStyles((theme: Theme) =>
             top: 'auto',
             bottom: 0,
         },
-        searchWrapper: {
-            flexDirection: "row",
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: 20,
-            marginBottom: 20,
-        },
         button: {
             padding: 15,
             marginLeft: 1,
+        },
+        searchTextField: {
+            width: '100%',
         },
     }),
 );
@@ -118,18 +114,22 @@ const Content = () => {
     }
     return (
         <React.Fragment>
-            {/* //make it a grid: searchwrapper */}
-            <div className={styles.searchWrapper}>
-                <Autocomplete
-                    id="add-a-location"
-                    options={locationsList}
-                    getOptionLabel={(option) => option}
-                    style={{ width: 600 }}
-                    renderInput={(params) => <TextField {...params} label="Location" variant="outlined" placeholder="Add a location" />}
-                    onChange={onChangeLocation}
-                />
-                <div>
-                    <TextField id="outlined-basic" label="Search by Name" variant="outlined" style={{ width: 600 }} onChange={onSearch} />
+            <Grid container spacing={2}>
+                <Grid item xs={12} sm={5} md={6} >
+                    <Autocomplete
+                        id="add-a-location"
+                        options={locationsList}
+                        getOptionLabel={(option) => option}
+                        renderInput={(params) => <TextField {...params} label="Location" variant="outlined" placeholder="Add a location" />}
+                        onChange={onChangeLocation}
+                    />
+                </Grid>
+
+                <Grid item xs={9} sm={5} md={5} >
+                    <TextField id="outlined-basic" label="Search by Name" variant="outlined" className={styles.searchTextField} onChange={onSearch} />
+                </Grid>
+
+                <Grid item xs={3} sm={2} md={1} >
                     <Button
                         variant="contained"
                         color="primary"
@@ -139,11 +139,10 @@ const Content = () => {
                     >
                         Search
                     </Button>
-                </div>
-            </div>
+                </Grid>
+            </Grid>
 
             <Grid container spacing={2}>
-                {console.log("listings", listings)}
                 <Dialog onClose={onclick} aria-labelledby="simple-dialog-title" open={isLoading} className={styles.loader}>
                     <CircularProgress size={80} />
                 </Dialog>

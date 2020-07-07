@@ -46,10 +46,10 @@ const ListingCard = (props: any) => {
                 <Typography variant="h5" color="primary" noWrap={true}>
                     {name}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" gutterBottom>
+                <Typography variant="body2" color="textSecondary" gutterBottom noWrap={true}>
                     {street}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" noWrap={true}>
                     Cancellation policy : {cancellation_policy}
                 </Typography>
                 <Typography variant="body2" className={classes.price} >
