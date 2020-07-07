@@ -1,9 +1,16 @@
-Install
+### Install
+
 `cd ProjectDirectory && yarn install`
+
 `cd frontend && yarn install`
 
-To run backend:
+### Run application
+
+backend
+
 `yarn start`
-To run frontend:
+
+frontend:
+
 `cd frontend && yarn start`
 
