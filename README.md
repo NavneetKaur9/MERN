@@ -1,16 +1,19 @@
+Air BNB Application utilising sample_airbnb data from MongoDB Atlas
+
+Backend:
 ### Install
 
 `cd ProjectDirectory && yarn install`
-
-`cd frontend && yarn install`
-
 ### Run application
 
-backend
+``yarn start``
 
-`yarn start`
 
-frontend:
+Frontend:
+### Install
+
+`cd frontend && yarn install`
+### Run application
 
 `cd frontend && yarn start`
 
