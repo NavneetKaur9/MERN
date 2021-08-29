@@ -2,12 +2,15 @@ import express from 'express';
 import path from 'path';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import config from './config';
+import config from "./config.js";
 // import userRoute from './routes/userRoute';
-import listingsRoute from './routes/listingsRoute';
-import cors from 'cors';
+import listingsRoute from "./routes/listingsRoute.js";
+import cors from "cors";
 // import orderRoute from './routes/orderRoute';
 // import { MongoClient } from 'mongodb';
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const mongodbUrl = config.MONGODB_URL;
 // async function main() {

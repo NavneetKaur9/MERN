@@ -1,5 +1,5 @@
 import express from 'express';
-import listingsAndReviews from '../models/listingsModel';
+import listingsAndReviews from "../models/listingsModel.js";
 // import { isAuth, isAdmin } from '../util';
 
 const router = express.Router();
